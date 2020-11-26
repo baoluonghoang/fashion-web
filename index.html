@@ -7,12 +7,16 @@
 
     <!-- Box icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
     <!-- reset css -->
     <link rel="stylesheet" href="./css/reset.css" />
 
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    
     <title>Cửa hàng quần áo</title>
 </head>
 
@@ -38,7 +42,7 @@
 
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link scroll-link">Trang chủ</a>
+                            <a href="./index.html" class="nav-link scroll-link">Trang chủ</a>
                         </li>
                         <li class="nav-item">
                             <a href="./products.html" class="nav-link scroll-link">Sản phẩm</a>
@@ -53,12 +57,10 @@
                             <a href="./login.html" class="nav-link scroll-link">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link icon"><img src="./images/cart.png" class="clock"
-                                    alt="Search" /></a>
+                            <a href="#" class="nav-link icon"><img src="./images/cart.png" alt="Search" /></a>
                         </li>
                     </ul>
                 </div>
-
                 <a href="" class="cart-icon">
                     <img src="./images/cart.png" alt="shopping-cart" />
                 </a>
@@ -68,7 +70,6 @@
                 </div>
             </div>
         </nav>
-
         <img src="./images/anhbao.png" alt="" class="hero-img" />
 
         <nav class="content-banner">
@@ -81,6 +82,7 @@
         </nav>
     </header>
     <!-- advert -->
+    <div data-aos="fade-up">
     <section class="advert section">
         <div class="advert-center container">
             <div class="advert-box">
@@ -123,6 +125,7 @@
             </div>
         </div>
     </section>
+    </div>
     <!-- product hot -->
     <nav id="product-hot">
         <div class="list-hot container">
@@ -252,7 +255,7 @@
     <nav id="list-product">
         <div class="product container">
             <div class="title-product">
-                <h1>Các loại sản phẩm</h1>
+                <h1 class="label-product">Các loại sản phẩm</h1>
             </div>
             <ul class="type-product">
                 <li class="type"><a href="#" class="text-type">Quần đùi</a></li>
@@ -610,7 +613,9 @@
             </div>
         </div>
     </footer>
+
     <script type="text/javascript" src="js/index.js"></script>
+    
 </body>
 
 </html>
