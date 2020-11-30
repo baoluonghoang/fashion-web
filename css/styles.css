@@ -40,7 +40,7 @@
   z-index: 9999;
 }
 
-.navbar-fix .logo h1, .navbar-fix .scroll-link, .navbar-fix .bx-menu{
+.navbar-fix .logo a, .navbar-fix .scroll-link, .navbar-fix .bx-menu{
   color: #322514;
 }
 
@@ -50,8 +50,9 @@
   justify-content: space-between;
 }
 
-.logo h1 {
-  font-size: 30px;
+.logo a {
+  font-weight: 700;
+  font-size: 28px;
   color: #322514;
   cursor: pointer;
 }
@@ -370,7 +371,6 @@
 .item {
   display: block;
   min-height: 350px;
-  border: none;
   margin-right: 10px;
   border: 1px solid #dddddd;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
@@ -381,6 +381,7 @@
 
 .item .pro-img {
   position: relative;
+  max-width: 100%;
   height: 22rem;
   background-color: #f6f2f1;
   transition: all 300ms ease-in-out;
@@ -1175,7 +1176,7 @@ a.a-service:hover {
   }
 
   .header {
-    height: 100vh;
+    height: 115vh;
   }
 
   .content-banner {
@@ -1259,7 +1260,7 @@ a.a-service:hover {
     padding: 10px 16px;
   }
 
-  .top-nav .logo h1 {
+  .top-nav .logo a {
     color: #fff;
   }
 
@@ -1298,7 +1299,7 @@ a.a-service:hover {
   }
 
   .nav-link:hover {
-    background-color: #dddddd;
+    background-color: #be1558;
     border:none;
   }
 
@@ -1379,8 +1380,8 @@ a.a-service:hover {
     font-size: 14px;
   }
 
-  .logo h1 {
-    font-size: 18px;
+  .logo a {
+    font-size: 24px;
   }
 
   .content-banner {
@@ -1669,6 +1670,10 @@ body.form-user {
   border-bottom: 3px solid #be1558;
 }
 @media screen and (max-width: 576px) {
+  .form-inner form .field input {
+    width: 95%;
+  }
+
   .products h2 {
     font-size: 20px;
   } 
@@ -1868,6 +1873,10 @@ body.form-user {
 }
 
 @media screen and (max-width: 415px) {
+  .form-inner form .field input {
+    width: 93%;
+  }
+
   .detail-item {
     padding:0;
     margin:0;

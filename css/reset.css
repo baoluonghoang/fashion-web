@@ -5,7 +5,6 @@ html, body, ul, li, * {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     width: 100%;
     position: relative;
     z-index: 1;

@@ -81,3 +81,24 @@ console.log(previous);
 console.log(screen.width);
 console.log(window.location.port);
 
+
+// const slider1 = document.getElementById("glide_1");
+
+// if(slider1) {
+//     new Glide(slider1, {
+//         type: "carousel",
+//         startAt: 0,
+//         hoverpause: true,
+//         perView: 4,
+//         animationDuration: 800,
+//         animationTimingFunc: "cubic-bezier(.165,.840,.44,.1)",
+//         breakpoints: {
+//             1200: {
+//                 perView: 3
+//             },
+//             768: {
+//                 perView: 2
+//             },
+//         },
+//     }).mount();
+// }
