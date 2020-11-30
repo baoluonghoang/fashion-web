@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    
+    <title>Dashboard Add Product</title>
+</head>
+
+<body>
+    <nav class="dashboard-admin">
+        <div class="header-dashboard">
+            <div class="welcome">
+                <h3>Hello Admin</h3>
+            </div>
+            <div class="header-search">
+                <input type="text" id="input-search" placeholder="Search here..." name="inputSearch">
+                <input type="button" id="button-search" name="search" value="Search">
+            </div>
+            <div class="signout">
+                <a href="./login.html">Sign Out</a>
+            </div>
+        </div>
+        <div class="content-dashboard">
+            <ul class="side-bar-dashboard">
+                <li class="href-admin"><a href="./index.html" class="a-admin">HomePage</a></li>
+                <li class="href-admin"><a href="./dashBoardAdmin.html" class="a-admin">User Information</a></li>
+                <li class="href-admin"><a href="./dashBoardListProduct.html" class="a-admin">List of products</a></li>
+                <li class="href-admin"><a href="./dashBoardHistory.html" class="a-admin">Purchase History</a></li>
+            </ul>
+            <div class="content-admin">
+                <h1 class="label-dashboard">Form Add Product</h1>
+                <a href="./dashBoardListProduct.html" class="return-dashboard"><img src="./images/back.png" class="back-home clock" alt="back"></a>
+                <form id="form-add-user">
+                    <table class="table-user">
+                        <tr>
+                            <td><label for="name-product">Product name:</label></td>
+                            <td><input type="text" name="name-product"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="image-product">Image:</label></td>
+                            <td><input type="button" value="Choose image" name="image-product"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="type-product">Type of product:</label></td>
+                            <td>
+                                <select name="type-product" id="type-product">
+                                    <option value="clothes">Clothes</option>
+                                    <option value="shirt">Shirt</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="price-product">Price:</label></td>
+                            <td><input type="text" name="price-product"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="quantity-product">Quantity:</label></td>
+                            <td><input type="number" name="quantity-product"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" Value="Add" id="btn-add-user"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- label -->
+    <nav id="label">
+        <div class="label-content container">
+            <div class="label-img">
+                <img src="./images/logo1.png" alt="logo1">
+            </div>
+            <div class="label-img">
+                <img src="./images/logo2.png" alt="logo2">
+            </div>
+            <div class="label-img">
+                <img src="./images/logo3.png" alt="logo3">
+            </div>
+            <div class="label-img">
+                <img src="./images/logo4.png" alt="logo4">
+            </div>
+            <div class="label-img">
+                <img src="./images/logo5.png" alt="logo5">
+            </div>
+            <div class="label-img">
+                <img src="./images/logo6.png" alt="logo6">
+            </div>  
+        </div>
+    </nav>
+
+    <footer id="footer">
+        <div class="list-service container">
+            <div class="first-service">
+                <div class="about">
+                    <label class="label-footer">Về chúng tôi</label>
+                    <p class="text-footer">Cửa hàng chúng tôi nằm ở K55/11 phường Mỹ An, Quận Ngũ Hành Sơn,
+                        Thành phố Đà Nẵng.
+                        Cửa hàng bao gồm 3 tầng và 1 chi nhánh với sản phẩm tập trung chủ yếu về thời
+                        trang, quần áo đẹp
+                        xu hướng thời trang bắt nhịp toàn cầu.</p>
+                </div>
+                <div class="support">
+                    <label class="label-service">Hỗ trợ</label>
+                    <ul class="ul-service">
+                        <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="second-service">
+                <div class="service">
+                    <a class="label-service">Dịch vụ</a>
+                    <ul class="ul-service">
+                        <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+                    </ul>
+                </div>
+                <div class="information">
+                    <a class="label-service">Thông tin</a>
+                    <ul class="ul-service">
+                        <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+                        <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="detail-us">
+            <div class="text">
+                <a class="title-link">Về chúng tôi </a>&nbsp;<a class="title-link">Dịch vụ khách hàng </a>&nbsp;<a
+                    class="title-link">Chính sách </a><a> 2020 web thời trang. Được làm bởi Hoàng Bảo </a>
+                <br>
+                <a class="link">Bản đồ</a> | <a class="link">Điều khoản</a> |
+                <a class="link">Tìm kiếm nhanh</a> | <a class="link">Đặt hàng nhanh</a> | <a class="link">Liên hệ
+                    chúng tôi</a>
+            </div>
+            <div class="social">
+                <img src="./images/twitter.png" class="clock" alt="">
+                <img src="./images/facebook.png" class="clock" alt="">
+                <img src="./images/telegram.png" class="clock" alt="">
+                <img src="./images/github.png" class="clock" alt="">
+                <img src="./images/gmail.png" class="clock" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    
+</body>
+
+</html>

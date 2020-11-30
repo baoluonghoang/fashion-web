@@ -33,29 +33,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
-
-const links = [...document.querySelectorAll(".scroll-link")];
-links.map(link => {
-  if (!link) return;
-  link.addEventListener("click", e => {
-    e.preventDefault();
-
-    const id = e.target.getAttribute("href").slice(1);
-
-    const element = document.getElementById(id);
-    const navbarFixed = navBar.classList.contains("navbar-fix");
-    let position = element.offsetTop - navHeight;
-
-    window.scrollTo({
-      top: position,
-      left: 0,
-    });
-
-    menu.classList.remove("show");
-    document.body.classList.remove("show");
-    navBar.classList.remove("show");
-  });
-});
 /*gasp*/
 
 gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
@@ -65,16 +42,42 @@ gsap.from(".content-banner h2", { opacity: 0, duration: 1, delay: 2, y: -50 });
 gsap.from(".content-banner h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
 gsap.from(".content-banner a", { opacity: 0, duration: 1, delay: 3.5, y: 50 });
 
-// const slider1 = document.getElementById("glide1");
 
-// if(slider1)
 
-// new Glide(slider1, {
-//     type: "carousel",
-//     startAt: 0,
-//     autoPlay: true,
-//     hoverpause:true,
-//     perView: 1,
-//     animationDuration: 800,
-//     animationTimingFunc: "linear",
-// }).mount();
+
+
+/*-----------login form -------------*/
+
+var user = "baodeptrai";
+var pass = "123456"
+
+function submitForm() {
+    var username = document.forms["myLoginForm"]["uname"].value;
+    var password = document.forms["myLoginForm"]["pw"].value;
+    if (username == "") {
+      alert("Bạn chưa nhập tài khoản hoặc mật khẩu ");
+      return false;
+    } else if(password == "") {
+        alert("Vui lòng nhập mật khẩu");
+        return false;
+    }else if (username.length <= 6) {
+        alert("Tài khoản quá ngắn. Vui lòng nhập lớn hơn 6 kí tự");
+        return false;
+    }else if (password.length <= 6) {
+        alert("Mật khẩu quá ngắn. Vui lòng nhập lớn hơn 6 kí tự");
+        return false;
+    }
+    window.location.href = "../dashBoardAdmin.html";
+}
+
+var previous = document.querySelector(".previous");
+var next = document.getElementsByClassName(".next").innerHTML;
+
+previous.addEventListener('click', () => {
+    window.location.assign("https://www.w3schools.com")
+})
+console.log(previous);
+
+console.log(screen.width);
+console.log(window.location.port);
+

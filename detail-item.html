@@ -13,7 +13,10 @@
 
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Cửa hàng quần áo</title>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <title>Detail Item</title>
 </head>
 
 <body>
@@ -44,16 +47,16 @@
                             <a href="./products.html" class="nav-link scroll-link">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link scroll-link">Về chúng tôi</a>
+                            <a href="./aboutUs.html" class="nav-link scroll-link">Về chúng tôi</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link scroll-link">Cá nhân</a>
+                            <a href="./userProfile.html" class="nav-link scroll-link">Cá nhân</a>
                         </li>
                         <li class="nav-item">
                             <a href="./login.html" class="nav-link scroll-link">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link icon"><img src="./images/cart.png" class="clock"
+                            <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png" class="clock"
                                     alt="Search" /></a>
                         </li>
                     </ul>
@@ -69,11 +72,53 @@
             </div>
         </nav>
     </header>
+    <!-- detail-item -->
+    <section id="information-item">
+        <div class="detail-item container">
+            <div class="detail-image-item">
+                <img src="./images/item1.jpeg" alt="" class="image-item">
+            </div>
+            <div class="detail-infor-item">
+                <div class="title-item">
+                    <h1 class="label-item">Áo thun trơn nam</h1>
+                </div>
+                <div class="price-detail-item">
+                    <small class="money-item">500.000đ</small>
+                </div>
+                <div class="choose-size-item">
+                    <label for="size" class="label-size-item">Select size: </label>
+                    <select name="size" id="size">
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XXL">XXL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                <div class="choose-quantity-item">
+                    <ul class="choose">
+                        <li class="choose-list"><a href="#" class="choose-item">-</a></li>
+                        <li class="choose-list"><a href="#" class="choose-item">1</a></li>
+                        <li class="choose-list"><a href="#" class="choose-item">+</a></li>
+                    </ul>
+                </div>
+                <div class="description-item">
+                    <label class="label-des-item">Chi tiết sản phẩm</label>
+                    <p class="txt-item">Sản phẩm được sản xuất từ Thanh Hóa. Với chất liệu vải nềm và mát, giá cả hợp lý
+                        , nó sẽ đem lại sự hài lòng cho bất cứ ai dùng nó.
+                    </p>
+                </div>
+                <div class="submit-purchase-item">
+                    <a href="" class="submit-item">Thêm vào giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- list-product -->
     <nav id="list-product">
         <div class="product container">
             <div class="products">
-                <h2>Danh sách sản phẩm</h2>
+                <h2>Các sản phẩm liên quan</h2>
             </div>
             <div class="list-item">
                 <div class="item">
@@ -82,76 +127,7 @@
                         <ul class="icons">
                             <span><i class="bx bx-heart"></i></span>
                             <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3>Boy’s T-Shirt</h3>
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img39">
-                            <img src="./images/star.png" alt="img40">
-                            <img src="./images/star.png" alt="img41">
-                            <img src="./images/star.png" alt="img42">
-                            <img src="./images/star.png" alt="img43">
-                        </span>
-                        <p>50.000</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                            <span><i class="bx bx-heart"></i></span>
-                            <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3>Boy’s T-Shirt</h3>
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img45">
-                            <img src="./images/star.png" alt="img46">
-                            <img src="./images/star.png" alt="img47">
-                            <img src="./images/star.png" alt="img48">
-                            <img src="./images/star.png" alt="img49">
-                        </span>
-                        <p>50.500</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                            <span><i class="bx bx-heart"></i></span>
-                            <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3>Boy’s T-Shirt</h3>
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img50">
-                            <img src="./images/star.png" alt="img51">
-                            <img src="./images/star.png" alt="img52">
-                            <img src="./images/star.png" alt="img53">
-                            <img src="./images/star.png" alt="img54">
-                        </span>
-                        <p>60.500</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                            <span><i class="bx bx-heart"></i></span>
-                            <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
                         </ul>
                     </div>
                     <div class="price-item">
@@ -174,7 +150,7 @@
                         <ul class="icons">
                             <span><i class="bx bx-heart"></i></span>
                             <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
                         </ul>
                     </div>
                     <div class="price-item">
@@ -197,7 +173,7 @@
                         <ul class="icons">
                             <span><i class="bx bx-heart"></i></span>
                             <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
                         </ul>
                     </div>
                     <div class="price-item">
@@ -220,30 +196,7 @@
                         <ul class="icons">
                             <span><i class="bx bx-heart"></i></span>
                             <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3>Boy’s T-Shirt</h3>
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img56">
-                            <img src="./images/star.png" alt="img57">
-                            <img src="./images/star.png" alt="img58">
-                            <img src="./images/star.png" alt="img59">
-                            <img src="./images/star.png" alt="img60">
-                        </span>
-                        <p>70.000</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                            <span><i class="bx bx-heart"></i></span>
-                            <span><i class="bx bx-shopping-bag"></i></span>
-                            <span><i class="bx bx-search"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
                         </ul>
                     </div>
                     <div class="price-item">
@@ -261,14 +214,9 @@
                     </div>
                 </div>
             </div>
-            <ul class="pagination-product">
-                <li class="list-pagination"><a href="" class="item-pagination">1</a></li>
-                <li class="list-pagination"><a href="" class="item-pagination">2</a></li>
-                <li class="list-pagination"><a href="" class="item-pagination">3</a></li>
-                <li class="list-pagination"><a href="" class="item-pagination">4</a></li>
-                <li class="list-pagination"><a href="" class="item-pagination">...</a></li>
-                <li class="list-pagination"><a href="" class="item-pagination">></a></li>
-            </ul>
+            <div class="more-item">
+                <a href="#" class="see-more">View More</a>
+            </div>
         </div>
     </nav>
     <!-- label -->
