@@ -1,3 +1,4 @@
+/* navbar responsive */
 const menu = document.querySelector('.menu');
 const menuOpen = document.querySelector('.mini-menu');
 const menuclose = document.querySelector('.close');
@@ -21,7 +22,7 @@ menuclose.addEventListener('click', () => {
     }
 })
 
-/*fix navbar*/
+/*fix navbar when scroll*/
 const navHeight = navBar.getBoundingClientRect().height;
 
 window.addEventListener('scroll', () => {
@@ -34,71 +35,62 @@ window.addEventListener('scroll', () => {
 })
 
 /*gasp*/
-
 gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
-gsap.from(".mini-menu", { opacity: 0, duration: 1, delay: 1, x: 20 });
-gsap.from(".hero-img", { opacity: 0, duration: 1, delay: 1.5, x: -200 });
+gsap.from(".mini-menu", { opacity: 0, duration: 1, delay: 0.8, x: 20 });
+gsap.from(".hero-img", { opacity: 0, duration: 1, delay: 1, x: -200 });
 gsap.from(".content-banner h2", { opacity: 0, duration: 1, delay: 2, y: -50 });
 gsap.from(".content-banner h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
 gsap.from(".content-banner a", { opacity: 0, duration: 1, delay: 3.5, y: 50 });
 
+/*hide_show discount form */
+const inforDiscount = document.querySelector(".infor-discount");
+const closeDiscount = document.querySelector(".discount-close");
+const button = document.querySelector(".btn");
+if(inforDiscount) {
+    // window.addEventListener("load", () => {
+    //     setTimeout(() => {
+    //         inforDiscount.classList.remove(".hide-discount")
+    //     }, 400);
+    // })
+    // button.addEventListener('click', () => {
+    //     inforDiscount.classList.remove("hide-discount");
+    // })
 
+    closeDiscount.addEventListener('click', () => {
+        inforDiscount.classList.add("hide-discount");
+    })
 
-
-
-/*-----------login form -------------*/
-
-var user = "baodeptrai";
-var pass = "123456"
-
-function submitForm() {
-    var username = document.forms["myLoginForm"]["uname"].value;
-    var password = document.forms["myLoginForm"]["pw"].value;
-    if (username == "") {
-      alert("Bạn chưa nhập tài khoản hoặc mật khẩu ");
-      return false;
-    } else if(password == "") {
-        alert("Vui lòng nhập mật khẩu");
-        return false;
-    }else if (username.length <= 6) {
-        alert("Tài khoản quá ngắn. Vui lòng nhập lớn hơn 6 kí tự");
-        return false;
-    }else if (password.length <= 6) {
-        alert("Mật khẩu quá ngắn. Vui lòng nhập lớn hơn 6 kí tự");
-        return false;
-    }
-    window.location.href = "../dashBoardAdmin.html";
+    closeDiscount.addEventListener('click', () => {
+        inforDiscount.classList.add("hide-discount");
+    })
 }
 
-var previous = document.querySelector(".previous");
-var next = document.getElementsByClassName(".next").innerHTML;
 
-previous.addEventListener('click', () => {
-    window.location.assign("https://www.w3schools.com")
-})
-console.log(previous);
+/*type-product in index.html */
 
-console.log(screen.width);
-console.log(window.location.port);
+var slideIndex = 1;
+showListProduct(slideIndex);
 
+function currentTypeProduct(n) {
+    showListProduct(slideIndex = n)
+}
 
-// const slider1 = document.getElementById("glide_1");
+function showListProduct(n) {
+    var typeOfList = document.querySelectorAll(".type-of-list");
+    var checkType = document.querySelectorAll(".check-type");
 
-// if(slider1) {
-//     new Glide(slider1, {
-//         type: "carousel",
-//         startAt: 0,
-//         hoverpause: true,
-//         perView: 4,
-//         animationDuration: 800,
-//         animationTimingFunc: "cubic-bezier(.165,.840,.44,.1)",
-//         breakpoints: {
-//             1200: {
-//                 perView: 3
-//             },
-//             768: {
-//                 perView: 2
-//             },
-//         },
-//     }).mount();
-// }
+    if(n > typeOfList.length) { slideIndex = 1}
+    if(n < 1) { slideIndex = typeOfList.length}
+
+    for(var i = 0; i < typeOfList.length; i++) {
+        typeOfList[i].style.display = "none";
+    }
+
+    for(var i = 0; i < checkType.length; i++) {
+        checkType[i].className =checkType[i].className.replace(" typeActive", " ");
+    }
+
+    typeOfList[slideIndex - 1].style.display = "grid";
+    checkType[slideIndex - 1].className += " typeActive";
+}
+

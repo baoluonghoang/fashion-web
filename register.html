@@ -15,29 +15,27 @@
                 Register Form
             </div>
         </div>
-        <div class="form-container">
-            <div class="form-inner">
-                <form action="#" class="login">
-                    <div class="field" for="email">
-                        <input type="text" id="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="field" for="uname">
-                        <input type="text" id="uname" placeholder="Username" required>
-                    </div>
-                    <div class="field" for="phone">
-                        <input type="text" id="phone" placeholder="Phone Number" required>
-                    </div>
-                    <div class="field" for="pw">
-                        <input type="password" id="pw" placeholder="Enter Your Password" required>
-                    </div>
-                    <div class="field" for="pw">
-                        <input type="password" id="pw" placeholder="Enter Your Password Again" required>
-                    </div>
-                    <input type="submit" value="Sign up" name="signup" id="btn-login">
-                    <div class="signup-link">
-                        If you had an account? <a href="./login.html" id="btn-hv">Cancel</a></div>
-                </form>
-            </div>
+        <div class="form-inner">
+            <form action="#" class="login">
+                <div class="field" for="email">
+                    <input type="text" id="input-email" name="email" min="6" max="50" value="" placeholder="Email Address" required>
+                </div>
+                <div class="field" for="username">
+                    <input type="text" id="input-username" name="username" min="6" max="50" value="" placeholder="Username">
+                </div>
+                <div class="field" for="phone">
+                    <input type="number" id="input-phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="field" for="password">
+                    <input type="password" id="input-password" name="password"  min="6" max="50" value="" placeholder="Password">
+                </div>
+                <div class="field" for="re-password">
+                    <input type="password" id="input-re-password" name="re-password"  min="6" max="50" value="" placeholder="Password Again">
+                </div>
+                <input type="submit" value="Sign up" name="signup" id="btn-login">
+                <div class="signup-link">
+                    If you had an account? <a href="./login.html" id="btn-hv">Cancel</a></div>
+            </form>
         </div>
     </div>
 </body>

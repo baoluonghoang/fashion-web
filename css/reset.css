@@ -6,12 +6,13 @@ html, body, ul, li, * {
 
 body {
     width: 100%;
+    max-height: auto;
     position: relative;
+    background-color: #ffffff;
+
     z-index: 1;
     font-size: 1.6rem;
     font-weight: 400;
-    background-color: #ffffff;
-    max-height: auto;
 }
 
 a {

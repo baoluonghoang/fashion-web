@@ -63,6 +63,11 @@
                             <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png" class="clock"
                                     alt="Search" /></a>
                         </li>
+                        <li class="nav-item">
+                            <div class="image-user">
+                                <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -72,6 +77,10 @@
 
                 <div class="mini-menu">
                     <i class="bx bx-menu"></i>
+                </div>
+
+                <div class="image-user first-image">
+                    <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
                 </div>
             </div>
         </nav>
@@ -98,9 +107,9 @@
                         </div>
                     </div>
                     <div class="infor-quantity">
-                        <span class="decrease">-</span>
-                        <span class="quantity">1</span>
-                        <span class="increase">+</span>
+                        <button class="decrease" onclick="decreaseCheck()">-</button>
+                        <input type="text" value="1" min="1" max="10" id="counter-product1">
+                        <button class="increase" onclick="increaseCheck()">+</button>
                     </div>
                     <div class="infor-total-money">
                         <span class="total-price">500.000</span>
@@ -118,9 +127,9 @@
                         </div>
                     </div>
                     <div class="infor-quantity">
-                        <a class="decrease">-</a>
-                        <span class="quantity">1</span>
-                        <a class="increase">+</a>
+                        <button class="decrease" onclick="decreaseCheck()">-</button>
+                        <input type="text" value="1" min="1" max="10" id="counter-product2">
+                        <button class="increase" onclick="increaseCheck()">+</button>
                     </div>
                     <div class="infor-total-money">
                         <span class="total-price">500.000</span>
@@ -138,9 +147,9 @@
                         </div>
                     </div>
                     <div class="infor-quantity">
-                        <span class="decrease">-</span>
-                        <span class="quantity">1</span>
-                        <span class="increase">+</span>
+                        <button class="decrease" onclick="decreaseCheck()">-</button>
+                        <input type="text" value="1" min="1" max="10" id="counter-product3">
+                        <button class="increase" onclick="increaseCheck()">+</button>
                     </div>
                     <div class="infor-total-money">
                         <span class="total-price">500.000</span>
@@ -254,6 +263,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/list-product-purchased.js"></script>
 </body>
 
 </html>

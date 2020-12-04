@@ -17,7 +17,7 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <title>Detail Item</title>
@@ -60,8 +60,13 @@
                             <a href="./login.html" class="nav-link scroll-link">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png" class="clock"
-                                    alt="Search" /></a>
+                            <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png"
+                                    class="clock" alt="Search" /></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="image-user">
+                                <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -73,6 +78,10 @@
                 <div class="mini-menu">
                     <i class="bx bx-menu"></i>
                 </div>
+
+                <div class="image-user first-image">
+                    <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
+                </div>
             </div>
         </nav>
     </header>
@@ -80,7 +89,40 @@
     <section id="information-item">
         <div class="detail-item container">
             <div class="detail-image-item">
-                <img src="./images/item1.jpeg" alt="" class="image-item">
+                <div class="list-infor-item">
+                    <div class="list-detail-item">
+                        <img src="./images/item1.jpeg" onclick="currentSlide(1)" alt="item2" class="image-item">
+                    </div>
+                    <div class="list-detail-item">
+                        <img src="./images/item2.jpeg" onclick="currentSlide(2)" alt="item3" class="image-item">
+                    </div>
+                    <div class="list-detail-item">
+                        <img src="./images/item3.jpeg" onclick="currentSlide(3)" alt="item4" class="image-item">
+                    </div>
+                    <div class="list-detail-item">
+                        <img src="./images/item4.jpeg" onclick="currentSlide(4)" alt="item5" class="image-item">
+                    </div>
+                    <div class="list-detail-item">
+                        <img src="./images/item5.jpeg" onclick="currentSlide(5)" alt="item5" class="image-item">
+                    </div>
+                </div>
+                <div class="main-infor-item">
+                    <div class="main-item">
+                        <img src="./images/item1.jpeg" alt="" class="main-image-item">
+                    </div>
+                    <div class="main-item">
+                        <img src="./images/item2.jpeg" alt="" class="main-image-item">
+                    </div>
+                    <div class="main-item">
+                        <img src="./images/item3.jpeg" alt="" class="main-image-item">
+                    </div>
+                    <div class="main-item">
+                        <img src="./images/item4.jpeg" alt="" class="main-image-item">
+                    </div>
+                    <div class="main-item">
+                        <img src="./images/item5.jpeg" alt="" class="main-image-item">
+                    </div>
+                </div>
             </div>
             <div class="detail-infor-item">
                 <div class="title-item">
@@ -89,35 +131,98 @@
                 <div class="price-detail-item">
                     <small class="money-item">500.000đ</small>
                 </div>
-                <div class="choose-size-item">
-                    <label for="size" class="label-size-item">Select size: </label>
-                    <select name="size" id="size">
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XXL">XXL</option>
-                        <option value="XXL">XXL</option>
-                    </select>
+                <div class="star-user">
+                    <img src="./images/star.png" alt="img56">
+                    <img src="./images/star.png" alt="img57">
+                    <img src="./images/star.png" alt="img58">
+                    <img src="./images/star.png" alt="img59">
+                    <img src="./images/star.png" alt="img59">
+                    <a href="#review" id="review-user">1 Reviews</a>
+                </div>
+                <div class="choose-product">
+                    <div class="choose-size-item">
+                        <label for="size" class="label-size-item">Select size: </label>
+                        <select name="size" id="size">
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XXL">XXL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                    <div class="choose-color-item">
+                        <label for="size" class="label-size-item">Select color: </label>
+                        <select name="size" id="size">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="choose-quantity-item">
-                    <ul class="choose">
-                        <li class="choose-list"><a href="#" class="choose-item">-</a></li>
-                        <li class="choose-list"><a href="#" class="choose-item">1</a></li>
-                        <li class="choose-list"><a href="#" class="choose-item">+</a></li>
-                    </ul>
+                    <label class="label-quantity">Quantity:</label>
+                    <div class="form-quantity">
+                        <button class="minus-btn" onclick="minusCheck()">-</button>
+                        <input type="text" value="1" min="1" max="10" id="counter-total" class="counter-btn">
+                        <button class="plus-btn" onclick="plusCheck()">+</button>
+
+                    </div>
                 </div>
                 <div class="description-item">
-                    <label class="label-des-item">Chi tiết sản phẩm</label>
-                    <p class="txt-item">Sản phẩm được sản xuất từ Thanh Hóa. Với chất liệu vải nềm và mát, giá cả hợp lý
+                    <label class="label-des-item">Product details</label>
+                    <p class="txt-item">Sản phẩm được sản xuất từ Thanh Hóa. Với chất liệu vải nềm và
+                        mát, giá cả hợp lý
                         , nó sẽ đem lại sự hài lòng cho bất cứ ai dùng nó.
                     </p>
                 </div>
                 <div class="submit-purchase-item">
-                    <a href="" class="submit-item">Thêm vào giỏ hàng</a>
+                    <a href="" class="submit-item">Add to cart</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- content comment -->
+    <div class="content-detail-product container" id="review">
+        <div class="content-tab">
+            <div class="title-feature">
+                <div class="btn-feature" onclick="currentDetail(1)">
+                    <i class='bx bxs-like bx-xs'></i>
+                    <h1 class="primary-title">Description</h1>
+                </div>
+            </div>
+            <div class="title-feature">
+                <div class="btn-feature" onclick="currentDetail(2)">
+                    <i class='bx bxs-like bx-xs'></i>
+                    <h1 class="primary-title">Review</h1>
+                </div>
+            </div>
+            <div class="title-feature">
+                <div class="btn-feature" onclick="currentDetail(3)">
+                    <i class='bx bxs-like bx-xs'></i>
+                    <h1 class="primary-title">Shipping detail</h1>
+                </div>
+            </div>
+        </div>
+        <div class="content-user-product">
+            <div class="text-product">
+                <p>
+                    Sản phẩm đẹp, chất lượng được xuất xứ từ Nga, bền chặt và tốt !
+                </p>
+            </div>
+            <div class="text-product">
+                <p>Customer Reviews</p>
+                <img src="./images/star.png" alt="img56">
+                <img src="./images/star.png" alt="img57">
+                <img src="./images/star.png" alt="img58">
+                <img src="./images/star.png" alt="img59">
+                <img src="./images/star.png" alt="img59">
+            </div>
+            <div class="text-product">
+                <p>Đặt 2 đơn miễn phí vận chuyển</p>
+            </div>
+        </div>
+    </div>
     <!-- list-product -->
     <nav id="list-product">
         <div class="product container">
@@ -218,8 +323,104 @@
                     </div>
                 </div>
             </div>
+            <div id="more">
+                <div class="list-item">
+                    <div class="item">
+                        <div class="pro-img">
+                            <img src="./images/item5.jpeg" alt="img4" />
+                            <ul class="icons">
+                                <span><i class="bx bx-heart"></i></span>
+                                <span><i class="bx bx-shopping-bag"></i></span>
+                                <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                            </ul>
+                        </div>
+                        <div class="price-item">
+                            <a href="#">
+                                <h3>Boy’s T-Shirt</h3>
+                            </a>
+                            <span>
+                                <img src="./images/star.png" alt="img56">
+                                <img src="./images/star.png" alt="img57">
+                                <img src="./images/star.png" alt="img58">
+                                <img src="./images/star.png" alt="img59">
+                                <img src="./images/star.png" alt="img60">
+                            </span>
+                            <p>70.000</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pro-img">
+                            <img src="./images/item2.jpeg" alt="img4" />
+                            <ul class="icons">
+                                <span><i class="bx bx-heart"></i></span>
+                                <span><i class="bx bx-shopping-bag"></i></span>
+                                <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                            </ul>
+                        </div>
+                        <div class="price-item">
+                            <a href="#">
+                                <h3>Boy’s T-Shirt</h3>
+                            </a>
+                            <span>
+                                <img src="./images/star.png" alt="img56">
+                                <img src="./images/star.png" alt="img57">
+                                <img src="./images/star.png" alt="img58">
+                                <img src="./images/star.png" alt="img59">
+                                <img src="./images/star.png" alt="img60">
+                            </span>
+                            <p>70.000</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pro-img">
+                            <img src="./images/item3.jpeg" alt="img4" />
+                            <ul class="icons">
+                                <span><i class="bx bx-heart"></i></span>
+                                <span><i class="bx bx-shopping-bag"></i></span>
+                                <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                            </ul>
+                        </div>
+                        <div class="price-item">
+                            <a href="#">
+                                <h3>Boy’s T-Shirt</h3>
+                            </a>
+                            <span>
+                                <img src="./images/star.png" alt="img56">
+                                <img src="./images/star.png" alt="img57">
+                                <img src="./images/star.png" alt="img58">
+                                <img src="./images/star.png" alt="img59">
+                                <img src="./images/star.png" alt="img60">
+                            </span>
+                            <p>70.000</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pro-img">
+                            <img src="./images/item4.jpeg" alt="img4" />
+                            <ul class="icons">
+                                <span><i class="bx bx-heart"></i></span>
+                                <span><i class="bx bx-shopping-bag"></i></span>
+                                <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                            </ul>
+                        </div>
+                        <div class="price-item">
+                            <a href="#">
+                                <h3>Boy’s T-Shirt</h3>
+                            </a>
+                            <span>
+                                <img src="./images/star.png" alt="img56">
+                                <img src="./images/star.png" alt="img57">
+                                <img src="./images/star.png" alt="img58">
+                                <img src="./images/star.png" alt="img59">
+                                <img src="./images/star.png" alt="img60">
+                            </span>
+                            <p>70.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="more-item">
-                <a href="#" class="see-more">View More</a>
+                <button onclick="seeMoreProduct()" id="see-more">View More</button>
             </div>
         </div>
     </nav>
@@ -243,7 +444,7 @@
             </div>
             <div class="label-img">
                 <img src="./images/logo6.png" alt="logo6">
-            </div>  
+            </div>
         </div>
     </nav>
 
@@ -311,6 +512,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/detail-item.js"></script>
 </body>
 
 </html>

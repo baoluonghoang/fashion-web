@@ -17,7 +17,7 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <title>Profile</title>
@@ -60,8 +60,13 @@
                             <a href="./login.html" class="nav-link scroll-link">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png" class="clock"
-                                    alt="Search" /></a>
+                            <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png"
+                                    class="clock" alt="Search" /></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="image-user">
+                                <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -73,6 +78,10 @@
                 <div class="mini-menu">
                     <i class="bx bx-menu"></i>
                 </div>
+
+                <div class="image-user first-image">
+                    <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
+                </div>
             </div>
         </nav>
     </header>
@@ -81,70 +90,150 @@
     <section id="my-History">
         <div class="history profile">
             <div class="side-bar-user side-profile">
-                <ul class="list-user">
-                    <li class="href-user"><a href="#" class="a-user">Thông tin cá nhân</a></li>
-                    <li class="href-user"><a href="./userPurchasedHistory.html" class="a-user">Lịch sử mua bán</a></li>
-                </ul>
+                <div class="list-user">
+                    <a onclick="currentUser(1)" class="a-user">User Information</a>
+                </div>
+                <div class="list-user">
+                    <a onclick="currentUser(2)" class="a-user">Purchased History</a>
+                </div>
             </div>
-            <div class="content-bar-profile">
-                <table id="form-profile">
-                    <tr>
-                        <td><label for="avatar">Your Image: </label></td>
-                        <td>
-                            <img src="./images/baodeptrai.png" alt="baodeptrai" class="img-profile">
-                            <input type="button" value="Choose image" name="avatar">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="username">Username: </label></td>
-                        <td>
-                            <input type="text" value="LuongHoangBao" name="username">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="password">Password: </label></td>
-                        <td>
-                            <input type="text" value="*******" name="password">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="gender">Gender: </label></td>
-                        <td>
-                            <input type="radio" id="male" value="gender" name="male">
-                            <label for="gender">Male</label>
-                            <input type="radio" id="female" value="gender" name="female">
-                            <label for="gender">Female </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="city">City: </label></td>
-                        <td>
-                            <select name="city" id="city">
-                                <option value="DN">Đà Nẵng</option>
-                                <option value="SG">Sài Gòn</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="address">Address: </label></td>
-                        <td>
-                            <textarea id="address" rows="4" cols="20" name="address"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="cmnd">CMND: </label></td>
-                        <td>
-                            <input type="text" value="201782515" name="cmnd">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input type="submit" value="Cập nhật" id="change-profile">
-                        </td>
-                    </tr>
-                    
-                </table>
+            <div class="content-bar">
+                <div class="content-bar-profile form-profile-user">
+                    <label id="label-form-profile">User Information</label>
+                    <form method="post" id="form-profile-user">
+                        <table id="form-profile">
+                            <tr>
+                                <td><label class="td-label" for="avatar">Your Image: </label></td>
+                                <td class="bg-img">
+                                    <img src="./images/baodeptrai.png" alt="baodeptrai" class="img-profile">
+                                    <input type="button" value="Choose image" id="choose-img" name="avatar">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="username">Username: </label></td>
+                                <td>
+                                    <input type="text" value="LuongHoangBao" id="user-username" name="username">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="email">Email: </label></td>
+                                <td>
+                                    <input type="text" value="baoluonghoang@gmail.com" id="user-email" name="email"
+                                        disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="gender">Gender: </label></td>
+                                <td>
+                                    <input type="radio" id="male" value="gender" name="male">
+                                    <label for="gender" class="gender-label">Male</label>
+                                    <input type="radio" id="female" value="gender" name="female">
+                                    <label for="gender" class="gender-label">Female </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="city">City: </label></td>
+                                <td>
+                                    <select name="city" id="user-city">
+                                        <option value="DN">Đà Nẵng</option>
+                                        <option value="SG">Sài Gòn</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="address">Address: </label></td>
+                                <td>
+                                    <textarea rows="4" cols="20" id="user-address" value="k55/11 Ngũ Hành Sơn"
+                                        name="address"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="cmnd">CMND: </label></td>
+                                <td>
+                                    <input type="text" value="201782515" id="user-cmnd" name="cmnd">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="password">Password: </label></td>
+                                <td>
+                                    <input type="text" value="*******" id="user-password" name="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="td-label" for="password">Password Again: </label></td>
+                                <td>
+                                    <input type="text" value="*******" id="user-password" name="password">
+                                </td>
+                            </tr>
+                            <tr class="update-profile">
+                                <td>
+                                    <input type="submit" value="Update Password" id="change-profile">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="content-bar-profile">
+                    <table id="table-history" border="1">
+                        <thead id="thead">
+                            <th>STT</th>
+                            <th>Product Name</th>
+                            <th>Image</th>
+                            <th>Type of product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Date of purchase</th>
+                            <th>Edit</th>
+                        </thead>
+                        <tbody>
+                            <tr id="history-purchase">
+                                <td>1</td>
+                                <td>Áo thun nam</td>
+                                <td><img src="./images/item1.jpeg" class="img-product" alt=""></td>
+                                <td>Áo</td>
+                                <td>500.000</td>
+                                <td>2</td>
+                                <td>1.000.000</td>
+                                <td>23/04/1998</td>
+                                <td><a href="" class="del">Delete</a></td>
+                            </tr>
+                            <tr id="history-purchase">
+                                <td>2</td>
+                                <td>Áo thun nam</td>
+                                <td><img src="./images/item2.jpeg" class="img-product" alt=""></td>
+                                <td>Áo</td>
+                                <td>500.000</td>
+                                <td>2</td>
+                                <td>1.000.000</td>
+                                <td>23/04/1998</td>
+                                <td><a href="" class="del">Delete</a></td>
+                            </tr>
+                            <tr id="history-purchase">
+                                <td>3</td>
+                                <td>Áo thun nam</td>
+                                <td><img src="./images/item3.jpeg" class="img-product" alt=""></td>
+                                <td>Áo</td>
+                                <td>500.000</td>
+                                <td>2</td>
+                                <td>1.000.000</td>
+                                <td>23/04/1998</td>
+                                <td><a href="" class="del">Delete</a></td>
+                            </tr>
+                            <tr id="history-purchase">
+                                <td>4</td>
+                                <td>Áo thun nam</td>
+                                <td><img src="./images/item3.jpeg" class="img-product" alt=""></td>
+                                <td>Áo</td>
+                                <td>500.000</td>
+                                <td>2</td>
+                                <td>1.000.000</td>
+                                <td>23/04/1998</td>
+                                <td><a href="" class="del">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
@@ -168,7 +257,7 @@
             </div>
             <div class="label-img">
                 <img src="./images/logo6.png" alt="logo6">
-            </div>  
+            </div>
         </div>
     </nav>
 
@@ -236,6 +325,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/userProfile.js"></script>
 </body>
 
 </html>

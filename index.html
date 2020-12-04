@@ -20,7 +20,7 @@
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    
+
     <title>HomePage</title>
 </head>
 
@@ -61,7 +61,14 @@
                             <a href="./login.html" class="nav-link scroll-link">Đăng nhập</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./list-product-purchased.html" class="nav-link icon"><img src="./images/cart.png" class="clock" alt="Search" /></a>
+                                <a href="./list-product-purchased.html" class="nav-link icon">
+                                    <img src="./images/cart.png" class="clock" alt="Search" />
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="image-user">
+                                <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +78,10 @@
 
                 <div class="mini-menu">
                     <i class="bx bx-menu"></i>
+                </div>
+                
+                <div class="image-user first-image">
+                    <img src="./images/baodeptrai.png" alt="baodeptrai" id="image-of-user">
                 </div>
             </div>
         </nav>
@@ -82,7 +93,7 @@
                 <span>Những mẫu quần áo</span>
                 <span>xinh đẹp</span>
             </h1>
-            <a href="#" class="btn" href="#">mua ngay</a>
+            <a href="./products.html" class="btn">mua ngay</a>
         </nav>
     </header>
     <!-- advert -->
@@ -135,104 +146,317 @@
                 <h1 class="label-hot">Những sản phẩm đang hot</h1>
             </div>
             <div class="pagination">
-                <button class="previous"><</button>
-                <button class="next">></button>
+                <button class="previous" onclick="changeslide(-1)"><</button>
+                <button class="next" onclick="changeslide(1)">></button>
             </div>
-            <div class="list-item">
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                          <span><i class="bx bx-heart"></i></span>
-                          <span><i class="bx bx-shopping-bag"></i></span>
-                          <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img10">
-                            <img src="./images/star.png" alt="img11">
-                            <img src="./images/star.png" alt="img12">
-                            <img src="./images/star.png" alt="img13">
-                            <img src="./images/star.png" alt="img14">
-                        </span>
-                        <p>60.000</p>
+            <div class="list-container">
+                <div class="slide-gr">
+                    <div class="slides">
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item1.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item2.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item3.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item4.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item5.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item6.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item3.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item4.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item4.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item5.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item6.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="item">
+                                <div class="pro-img">
+                                    <img src="./images/item3.jpeg" alt="img4" />
+                                    <ul class="icons">
+                                        <span><i class="bx bx-heart"></i></span>
+                                        <span><i class="bx bx-shopping-bag"></i></span>
+                                        <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                                    </ul>
+                                </div>
+                                <div class="price-item">
+                                    <a href="#">
+                                        <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                                    </a>
+                                    <span>
+                                        <img src="./images/star.png" alt="img56">
+                                        <img src="./images/star.png" alt="img57">
+                                        <img src="./images/star.png" alt="img58">
+                                        <img src="./images/star.png" alt="img59">
+                                        <img src="./images/star.png" alt="img60">
+                                    </span>
+                                    <p>70.000</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                          <span><i class="bx bx-heart"></i></span>
-                          <span><i class="bx bx-shopping-bag"></i></span>
-                          <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img22">
-                            <img src="./images/star.png" alt="img23">
-                            <img src="./images/star.png" alt="img24">
-                            <img src="./images/star.png" alt="img25">
-                            <img src="./images/star.png" alt="img26">
-                        </span>
-                        <p>150.000</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                          <span><i class="bx bx-heart"></i></span>
-                          <span><i class="bx bx-shopping-bag"></i></span>
-                          <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img28">
-                            <img src="./images/star.png" alt="img29">
-                            <img src="./images/star.png" alt="img30">
-                            <img src="./images/star.png" alt="img31">
-                            <img src="./images/star.png" alt="img32">
-                        </span>
-                        <p>550.500</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pro-img">
-                        <img src="./images/item1.jpeg" alt="img4" />
-                        <ul class="icons">
-                          <span><i class="bx bx-heart"></i></span>
-                          <span><i class="bx bx-shopping-bag"></i></span>
-                          <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                        </ul>
-                    </div>
-                    <div class="price-item">
-                        <a href="#">
-                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                        </a>
-                        <span>
-                            <img src="./images/star.png" alt="img33">
-                            <img src="./images/star.png" alt="img34">
-                            <img src="./images/star.png" alt="img35">
-                            <img src="./images/star.png" alt="img36">
-                            <img src="./images/star.png" alt="img37">
-                        </span>
-                        <p>99.000</p>
-                    </div>
-                </div>
-                
             </div>
+        </div>
+
         </div>
     </nav>
     <!-- about -->
@@ -240,6 +464,12 @@
         <div class="about-me container">
             <div class="about-content">
                 <h1 class="fashion-title">Cửa hàng HB</h1>
+                <p class="fashion-text">Cửa hàng chúng tôi nằm ở K55/11 phường Mỹ An, Quận Ngũ Hành Sơn,
+                    Thành phố Đà Nẵng.
+                    Cửa hàng bao gồm 3 tầng và 1 chi nhánh với sản phẩm tập trung chủ yếu về thời trang,
+                    quần áo đẹp
+                    xu hướng thời trang bắt nhịp toàn cầu.
+                </p>
                 <p class="fashion-text">Cửa hàng chúng tôi nằm ở K55/11 phường Mỹ An, Quận Ngũ Hành Sơn,
                     Thành phố Đà Nẵng.
                     Cửa hàng bao gồm 3 tầng và 1 chi nhánh với sản phẩm tập trung chủ yếu về thời trang,
@@ -261,203 +491,746 @@
                 <h1 class="label-hot">Các loại sản phẩm </h1>
             </div>
             <ul class="type-product">
-                <li class="type"><a href="#" class="text-type">Quần đùi</a></li>
-                <li class="type"><a href="#" class="text-type">Dép</a></li>
-                <li class="type"><a href="#" class="text-type">Giày</a></li>
-                <li class="type"><a href="#" class="text-type">Tất</a></li>
-                <li class="type"><a href="#" class="text-type">Áo khoác</a></li>
+                <li class="type">
+                    <p class="text-type check-type" onclick="currentTypeProduct(1)">Quần đùi</p>
+                </li>
+                <li class="type">
+                    <p class="text-type check-type" onclick="currentTypeProduct(2)">Dép</p>
+                </li>
+                <li class="type">
+                    <p class="text-type check-type" onclick="currentTypeProduct(3)">Giày</p>
+                </li>
+                <li class="type">
+                    <p class="text-type check-type" onclick="currentTypeProduct(4)">Tất</p>
+                </li>
+                <li class="type">
+                    <p class="text-type check-type" onclick="currentTypeProduct(5)">Áo khoác</p>
+                </li>
             </ul>
-            <div class="pagination">
-                <button class="previous"><</button>
-                <button class="next">></button>
-            </div>
+            <br>
+            <div class="list-item type-of-list">
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item1.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
 
-                <div class="list-item">
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img39">
-                                <img src="./images/star.png" alt="img40">
-                                <img src="./images/star.png" alt="img41">
-                                <img src="./images/star.png" alt="img42">
-                                <img src="./images/star.png" alt="img43">
-                            </span>
-                            <p>50.000</p>
-                        </div>
+            </div>
+            <div class="list-item type-of-list">
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img45">
-                                <img src="./images/star.png" alt="img46">
-                                <img src="./images/star.png" alt="img47">
-                                <img src="./images/star.png" alt="img48">
-                                <img src="./images/star.png" alt="img49">
-                            </span>
-                            <p>50.500</p>
-                        </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img50">
-                                <img src="./images/star.png" alt="img51">
-                                <img src="./images/star.png" alt="img52">
-                                <img src="./images/star.png" alt="img53">
-                                <img src="./images/star.png" alt="img54">
-                            </span>
-                            <p>60.500</p>
-                        </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img56">
-                                <img src="./images/star.png" alt="img57">
-                                <img src="./images/star.png" alt="img58">
-                                <img src="./images/star.png" alt="img59">
-                                <img src="./images/star.png" alt="img60">
-                            </span>
-                            <p>70.000</p>
-                        </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img56">
-                                <img src="./images/star.png" alt="img57">
-                                <img src="./images/star.png" alt="img58">
-                                <img src="./images/star.png" alt="img59">
-                                <img src="./images/star.png" alt="img60">
-                            </span>
-                            <p>70.000</p>
-                        </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img56">
-                                <img src="./images/star.png" alt="img57">
-                                <img src="./images/star.png" alt="img58">
-                                <img src="./images/star.png" alt="img59">
-                                <img src="./images/star.png" alt="img60">
-                            </span>
-                            <p>70.000</p>
-                        </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img56">
-                                <img src="./images/star.png" alt="img57">
-                                <img src="./images/star.png" alt="img58">
-                                <img src="./images/star.png" alt="img59">
-                                <img src="./images/star.png" alt="img60">
-                            </span>
-                            <p>70.000</p>
-                        </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
                     </div>
-                    <div class="item">
-                        <div class="pro-img">
-                            <img src="./images/item1.jpeg" alt="img4" />
-                            <ul class="icons">
-                              <span><i class="bx bx-heart"></i></span>
-                              <span><i class="bx bx-shopping-bag"></i></span>
-                              <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
-                            </ul>
-                        </div>
-                        <div class="price-item">
-                            <a href="#">
-                                <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
-                            </a>
-                            <span>
-                                <img src="./images/star.png" alt="img56">
-                                <img src="./images/star.png" alt="img57">
-                                <img src="./images/star.png" alt="img58">
-                                <img src="./images/star.png" alt="img59">
-                                <img src="./images/star.png" alt="img60">
-                            </span>
-                            <p>70.000</p>
-                        </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
                     </div>
-                    
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item2.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item type-of-list">
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item3.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item3.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item3.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item3.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item3.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item type-of-list">
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item4.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item4.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item4.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item4.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item4.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item type-of-list">
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item5.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item5.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item5.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item5.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item5.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pro-img">
+                        <img src="./images/item5.jpeg" alt="img4" />
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><a href="./detail-item.html"><i class="bx bx-search"></i></a></span>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <a href="#">
+                            <h3 class="label-product">Boy’s T-Shirt</h3 class="label-product">
+                        </a>
+                        <span>
+                            <img src="./images/star.png" alt="img56">
+                            <img src="./images/star.png" alt="img57">
+                            <img src="./images/star.png" alt="img58">
+                            <img src="./images/star.png" alt="img59">
+                            <img src="./images/star.png" alt="img60">
+                        </span>
+                        <p>70.000</p>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -492,7 +1265,7 @@
     <nav id="contact">
         <div class="contact-me container">
             <div class="contact-banner">
-                <img src="./images/contact-banner.jpeg" alt="contact-banner">
+                <img src="./images/contact-banner.jpeg" alt="ct-banner" id="contact-image-banner">
             </div>
             <div class="contact-form">
                 <form action="" method="POST" id="submit-form">
@@ -547,7 +1320,7 @@
             </div>
             <div class="label-img">
                 <img src="./images/logo6.png" alt="logo6">
-            </div>  
+            </div>
         </div>
     </nav>
 
@@ -615,7 +1388,31 @@
         </div>
     </footer>
 
+    <div class="infor-discount hide-discount">
+        <div class="discount-content">
+            <div class="discount-close">
+                <i class="bx bx-x"></i>
+            </div>
+            <div class="discount-left">
+                <div class="discount-image">
+                    <img src="./images/anhbao.png" alt="anhbao" class="dis-img">
+                </div>
+            </div>
+            <div class="discount-right">
+                <div class="content-right">
+                    <h1>Get Discount <span>30%</span> Off</h1>
+                    <p>Sign up to our website and save 30% for you next purchase. No spam, we promise!
+                    </p>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your email..." class="discount-form">
+                        <a href="#">Subscribe</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 </body>
 
 </html>
